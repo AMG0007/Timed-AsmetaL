@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/.svn/" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="/libs/org.eclipse.emf.common.jar"/>
+	<classpathentry kind="lib" path="/libs/org.eclipse.emf.ecore.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/emf"/>
+	<classpathentry kind="lib" path="/libs/log4j.jar" sourcepath="/libs/log4j.jar"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

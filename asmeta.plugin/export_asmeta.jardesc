@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="asmeta.plugin/asmeta.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="export_asmeta.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=emf/src_gen"/>
+        <folder path="/emf/model"/>
+        <javaElement handleIdentifier="=emf/src_emf_helper"/>
+        <javaElement handleIdentifier="=interpreter/src"/>
+        <javaElement handleIdentifier="=parser/src"/>
+        <javaElement handleIdentifier="=asmetasmv/src"/>
+        <javaElement handleIdentifier="=validator/src"/>
+        <javaElement handleIdentifier="=validator/src.emf"/>
+        <javaElement handleIdentifier="=validator/src.javacc"/>
+    </selectedElements>
+</jardesc>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            name="AsmetaL Editor"
+            extensions="asm"
+            icon="icons/asm_src.gif"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            class="org.asmeta.eclipse.editor.AsmetaLEditor"
+            id="org.asmeta.eclipse.editor.AsmetaLEditor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.asmeta.eclipse.editor.preferences.AsmetaPreferencePage"
+            id="asmeta.plugin.preferences"
+            name="Asmeta">
+      </page>
+      <page
+      		category="asmeta.plugin.preferences"
+            class="org.asmeta.eclipse.editor.preferences.AsmEEPreferencePage"
+            id="asmee.editor.preferences.AsmEEPreference"
+            name="Asmee"/>
+   </extension>
+  <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="AsmM"
+            class="org.asmeta.eclipse.editor.wizards.AsmetaLNewWizard"
+            icon="icons/asm_src.gif"
+            id="asmmeee.editor.wizards.AsmetaLNewWizard"
+            name="AsmetaL new file"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="org.asmeta.eclipse.editor.actionSet"
+            label="AsmetaL editor actions"
+            visible="true">
+         <menu
+               id="asmee"
+               label="Asm&amp;EE">
+            <separator name="parseGroup"/>
+         </menu>
+         <action
+               class="org.asmeta.eclipse.editor.actions.ParseAction"
+               icon="icons/check.gif"
+               id="org.asmeta.eclipse.editor.actions.Parse"
+               label="&amp;Parse"
+               menubarPath="Asmee/parseGroup"
+               toolbarPath="AsmeeToolBar"
+               tooltip="Parse this asm"/>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer class="org.asmeta.eclipse.editor.preferences.PreferenceInitializer"/>
+   </extension>
+      <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="org.asmeta.eclipse.interpreter.actionSet"
+            label="Asm Interpreter Run action"
+            visible="true">
+         <menu
+               label="Asm&amp;EE"
+               id="asmee">
+            <separator
+                  name="runGroup">
+            </separator>
+         </menu>
+         <action
+               label="&amp;Run rnd"
+               icon="icons/run_rnd.gif"
+               class="org.asmeta.eclipse.interpreter.actions.RunRndAction"
+               tooltip="Run this asm randomly"
+               menubarPath="Asmee/runGroup"
+               toolbarPath="AsmeeToolBar"
+               id="org.asmeta.eclipse.interpreter.actions.RunRnd">
+         </action>
+         <action
+               label="&amp;Run"
+               icon="icons/run_asm_tool.gif"
+               class="org.asmeta.eclipse.interpreter.actions.RunStepAction"
+               tooltip="Run this asm interactively"
+               menubarPath="Asmee/runGroup"
+               toolbarPath="AsmeeToolBar"
+               id="org.asmeta.eclipse.interpreter.actions.Run">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+      point="org.eclipse.ui.console.consolePageParticipants">
+      <consolePageParticipant
+		      id="org.asmeta.eclipse.AsmeePageParticipant"
+      			class="org.asmeta.eclipse.AsmeeConsoleParticipant">
+      			<enablement>
+			<instanceof value="org.asmeta.eclipse.AsmeeConsole"/>
+			</enablement>
+   		</consolePageParticipant>            
+	</extension>
+</plugin>

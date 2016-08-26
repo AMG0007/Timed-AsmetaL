@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: parser
+Bundle-SymbolicName: parser
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: parser.jar,
+ org.eclipse.emf.common.jar,
+ org.eclipse.emf.ecore.jar,
+ log4j.jar
+Export-Package: org.asmeta.parser,
+ org.asmeta.parser.util
+Import-Package: asmeta.terms.furtherterms
